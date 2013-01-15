@@ -4,7 +4,7 @@ SRC_DIR = source
 SRCS = $(SRC_DIR)/libdthread.cpp $(SRC_DIR)/xrun.cpp $(SRC_DIR)/xthread.cpp $(SRC_DIR)/xmemory.cpp $(SRC_DIR)/prof.cpp $(SRC_DIR)/real.cpp
 DEPS = $(SRCS) $(INC_DIR)/xpersist.h $(INC_DIR)/xdefines.h $(INC_DIR)/xglobals.h $(INC_DIR)/xpersist.h $(INC_DIR)/xplock.h $(INC_DIR)/xrun.h $(INC_DIR)/warpheap.h $(INC_DIR)/xadaptheap.h $(INC_DIR)/xoneheap.h
 
-INCLUDE_DIRS = -I$(INC_DIR) -I$(INC_DIR)/heaplayers -I$(INC_DIR)/heaplayers/util
+INCLUDE_DIRS = -I$(INC_DIR) -I./Heap-Layers
 
 all: libdthread.so
 
@@ -12,7 +12,8 @@ all: libdthread.so
 #CXX = g++ -march=core2 -mtune=core2 -msse3
 
 #32 bit version.
-CXX = g++ -march=core2 -mtune=core2 -msse3 -m32 -DSSE_SUPPORT 
+CXX = ${HOME}/tools/llvm-3.2/bin/clang++ -march=core2 -mtune=core2 -msse3 -m32 -DSSE_SUPPORT 
+#CXX = g++ -march=core2 -mtune=core2 -msse3 -m32 -DSSE_SUPPORT 
 
 # Check deterministic schedule
 # -DCHECK_SCHEDULE

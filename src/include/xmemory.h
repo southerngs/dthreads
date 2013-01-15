@@ -42,7 +42,8 @@
 #include "xglobals.h"
 
 // Heap Layers
-#include "heaplayers/stlallocator.h"
+//#include "heaplayers/stlallocator.h"
+#include "wrappers/stlallocator.h"
 #include "warpheap.h"
 
 #include "xoneheap.h"

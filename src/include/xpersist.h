@@ -44,10 +44,15 @@
 #include <xmmintrin.h>
 
 #include "xatomic.h"
-#include "heaplayers/ansiwrapper.h"
-#include "heaplayers/freelistheap.h"
+//#include "heaplayers/ansiwrapper.h"
+//#include "heaplayers/freelistheap.h"
 
-#include "heaplayers/stlallocator.h"
+//#include "heaplayers/stlallocator.h"
+
+#include "wrappers/ansiwrapper.h"
+#include "heaps/buildingblock/freelistheap.h"
+#include "wrappers/stlallocator.h"
+
 #include "privateheap.h"
 #include "xdefines.h"
 #include "xbitmap.h"

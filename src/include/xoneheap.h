@@ -38,6 +38,8 @@ public:
   xoneheap() {
   }
 
+  enum { Alignment = 16 };
+  
   void initialize(void) {
     getHeap()->initialize();
   }

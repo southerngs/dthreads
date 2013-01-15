@@ -85,6 +85,7 @@ public:
 		return (void *)*_position;
 	}
 
+
 	// We need to page-aligned size, we don't need two different threads are using the same page here.
 	inline void * malloc(size_t sz) {
 		sanityCheck();

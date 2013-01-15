@@ -124,7 +124,7 @@ void * memalign(size_t boundary, size_t size) {
 	return NULL;
 }
 
-size_t malloc_usable_size(void * ptr) {
+size_t malloc_usable_size(void * ptr) throw () {
 	//assert(initialized);
 	if(initialized) {
 		return xrun::getSize(ptr);

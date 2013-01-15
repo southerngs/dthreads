@@ -35,6 +35,8 @@ public:
     : _alreadyMalloced (false)
   {}
 
+  enum { Alignment = 16 };
+
   void * malloc (size_t) {
     if (_alreadyMalloced) {
       return NULL;

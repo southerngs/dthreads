@@ -31,18 +31,32 @@
 #define _WARPHEAP_H_
 
 #include "xdefines.h"
-#include "heaplayers/util/sassert.h"
+//#include "heaplayers/util/sassert.h"
+#include "utility/sassert.h"
 #include "xadaptheap.h"
 #include "real.h"
 
+#if 0
+// Old include structure
 #include "heaplayers/ansiwrapper.h"
 #include "heaplayers/kingsleyheap.h"
 #include "heaplayers/adapt.h"
-//#include "heaplayers/adaptheap.h"
 #include "heaplayers/util/sllist.h"
 #include "heaplayers/util/dllist.h"
 #include "heaplayers/sanitycheckheap.h"
 #include "heaplayers/zoneheap.h"
+#else
+// New include structure
+#include "wrappers/ansiwrapper.h"
+#include "heaps/general/kingsleyheap.h"
+#include "heaps/buildingblock/adaptheap.h"
+#include "utility/sllist.h"
+#include "utility/dllist.h"
+#include "heaps/debug/sanitycheckheap.h"
+#include "heaps/special/zoneheap.h"
+#endif
+
+
 #include "objectheader.h"
 
 #define ALIGN_TO_PAGE 0 // doesn't work...

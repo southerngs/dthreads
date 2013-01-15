@@ -16,9 +16,13 @@
 
 // Heap Layers
 
-#include "heaplayers/freelistheap.h"
-#include "heaplayers/mmapheap.h"
-#include "heaplayers/util/cpuinfo.h"
+//#include "heaplayers/freelistheap.h"
+//#include "heaplayers/mmapheap.h"
+//#include "heaplayers/util/cpuinfo.h"
+
+#include "heaps/buildingblock/freelistheap.h"
+#include "heaps/top/mmapheap.h"
+#include "threads/cpuinfo.h"
 
 extern "C" {
 // The type of a pthread function.
