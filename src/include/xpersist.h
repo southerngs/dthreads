@@ -90,7 +90,7 @@ public:
     // Check predefined globals size is large enough or not. 
     if (_startsize > 0) {
       if (_startsize > NElts * sizeof(Type)) {
-        fprintf(stderr, "This persistent region (%Zd) is too small (%Zd).\n", NElts * sizeof(Type), _startsize);
+        fprintf(stderr, "This persistent region (%zd) is too small (%zd).\n", NElts * sizeof(Type), _startsize);
         ::abort();
       }
     }

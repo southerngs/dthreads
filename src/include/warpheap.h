@@ -95,7 +95,7 @@ public:
 		objectHeader * o = getObject(ptr);
 		size_t sz = o->getSize();
 		if (sz == 0) {
-			fprintf(stderr, "%d : getSize error, with ptr = %p. sz %Zd \n", getpid(), ptr, sz);
+			fprintf(stderr, "%d : getSize error, with ptr = %p. sz %zd \n", getpid(), ptr, sz);
 		}
 		return sz;
 	}

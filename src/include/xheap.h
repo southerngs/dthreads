@@ -101,11 +101,11 @@ public:
 #endif
 
 		if (*_remaining == 0) {
-			fprintf(stderr, "FOOP: something very bad has happened: _start = %x, _position = %p, _remaining = %Zx.\n", *_start, *_position, *_remaining);
+			fprintf(stderr, "FOOP: something very bad has happened: _start = %x, _position = %p, _remaining = %zx.\n", *_start, *_position, *_remaining);
 		}
 
 		if (*_remaining < sz) {
-			fprintf(stderr, "CRAP: remaining[%Zx], sz[%Zx] thread[%d]\n", *_remaining, sz, (int) pthread_self());
+			fprintf(stderr, "CRAP: remaining[%zx], sz[%zx] thread[%d]\n", *_remaining, sz, (int) pthread_self());
 			exit(-1);
 		}
 		void * p = (void *)*_position;
@@ -163,7 +163,7 @@ private:
 
 	void sanityCheck(void) {
 		if (*_magic != 0xCAFEBABE) {
-			fprintf(stderr, "%d : WTF with magic %Zx!\n", getpid(), *_magic);
+			fprintf(stderr, "%d : WTF with magic %zx!\n", getpid(), *_magic);
 			::abort();
 		}
 	}
