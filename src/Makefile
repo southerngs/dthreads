@@ -20,7 +20,9 @@ CXX = ${HOME}/tools/llvm-3.2/bin/clang++ -march=core2 -mtune=core2 -msse3 -m32 -
 
 # Get some characteristics about running.
 # -DGET_CHARACTERISTICS
-CFLAGS = -O3 -DNDEBUG -shared -fPIC -DLAZY_COMMIT -DLOCK_OWNERSHIP -DDETERM_MEMORY_ALLOC -D'CUSTOM_PREFIX(x)=grace\#\#x'
+CFLAGS = -DNDEBUG -shared -fPIC -DLAZY_COMMIT -DLOCK_OWNERSHIP -DDETERM_MEMORY_ALLOC -D'CUSTOM_PREFIX(x)=grace\#\#x'
+CFLAGS += -O0 -g
+#CFLAGS += -O3
 
 LIBS = -ldl -lpthread
 
